@@ -3,7 +3,10 @@ export const home = (req, res) => res.render("home", {pageTitle: "Home"});
 export const search = (req, res) => {
     // es6 이전방식
     // const searchingBy = req.query.term
-    res.render("search", {pageTitle: "Search"});
+    const {
+        query: {term: searchingBy}
+    } = req;
+    res.render("search", {pageTitle: "Search", searchingBy});
 }
 
 export const videos = (req, res) => res.render("videos", {pageTitle: "Videos"});
