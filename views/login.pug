@@ -1,4 +1,9 @@
 extends layouts/main
 
 block content
-    p Login
+    .form_container
+        form(action="/login", post="post")
+            input(type="email", name="email", palceholer="Email")
+            input(type="pssword", name="password", placeholder="Password")
+            input(type="submit", value="Log In")
+        include partials/socialLogin
