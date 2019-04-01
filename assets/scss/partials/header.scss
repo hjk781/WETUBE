@@ -1,0 +1,46 @@
+.header {
+  background: $red;
+  margin-bottom: 50px;
+  .header_wrapper {
+    padding: 5px 0px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .header_column {
+      i {
+        color: white;
+        font-size: 30px;
+      }
+      &:nth-child(2) {
+        width: 60%;
+      }
+      ul {
+        display: flex;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        li:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+      form {
+        width: 100%;
+        input {
+          padding: 7px 10px;
+          width: 100%;
+          border-radius: 5px;
+          font-size: 14px;
+          color: $black;
+          font-weight: 600;
+          &::placeholder {
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+      }
+    }
+  }
+}
