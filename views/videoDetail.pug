@@ -5,12 +5,16 @@ block content
         .video_player
             video(src=`/${video.fileUrl}`)
         .video_info
-            a(href=routes.editVideo(video.id)) Edit Video
+            a(href=routes.editVideo(video.id))
+                button Edit video
             h5.video_title=video.title
-            span.video_views=video.views
             p.video_description=video.description
+            if video.views === 1
+                span.video_views 1 view
+            else 
+                span.video_views #{video.views} views
         .video_comments
             if video.comments.length === 1
-                span.video_coomment-number 1 comment
+                span.video_comment-number 1 comment
             else
-                span.video_coomment-number #{video.comments.length} comments
+                span.video_comment-number #{video.comments.length} comments
