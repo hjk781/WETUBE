@@ -9,20 +9,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  &:not(:last-child) {
-    margin-bottom: 15px;
-  }
-  span {
-    margin-right: 10px;
-    font-size: 20px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    span {
+      margin-right: 10px;
+      font-size: 20px;
+    }
   }
   .social-login-github {
-    background: $black;
-    color: #fff;
+    background-color: $black;
+    color: white;
   }
   .social-login-facebook {
     background-color: #3a5998;
-    color: #fff;
+    color: white;
   }
 }
