@@ -15,14 +15,14 @@ const videoRouter = express.Router();
 videoRouter.get(routes.upload, onlyPrivate, getUpload);
 videoRouter.post(routes.upload, onlyPrivate, uploadVideo, postUpload);
 
-// video detail
+// Video Detail
 videoRouter.get(routes.videoDetail(), videoDetail);
 
-// edit video
+// Edit Video
 videoRouter.get(routes.editVideo(), onlyPrivate, getEditVideo);
 videoRouter.post(routes.editVideo(), onlyPrivate, postEditVideo);
 
-// delet video
+// Delete Video
 videoRouter.get(routes.deleteVideo(), onlyPrivate, deleteVideo);
 
 export default videoRouter;

@@ -14,10 +14,10 @@ block content
             p.video_description=video.description
             if video.views === 1
                 span.video_views 1 view
-            else
+            else 
                 span.video_views #{video.views} views
-            .video_author
-                |Uploaded by 
+            .video__author
+                |Uloaded by 
                 a(href=routes.userDetail(video.creator.id))=video.creator.name
         .video_comments
             if video.comments.length === 1

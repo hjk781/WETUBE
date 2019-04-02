@@ -1,15 +1,15 @@
 mixin videoPlayer(video = {})
-    .videoPlayer
+    .videoPlayer#jsVideoplayer
         video(src=`/${video.src}`)
         .videoPlayer_controls
             .videoPlayer_column
-                span
+                span#jsVolumeBtn
                     i.fas.fa-volume-up
                 span
                     |00:00 / 10:00
             .videoPlayer_column
-                span
+                span#jsPlayButton
                     i.fas.fa-play
             .videoPlayer_column
-                span
+                span#jsFullScreen
                     i.fas.fa-expand      
