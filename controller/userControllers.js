@@ -1,7 +1,6 @@
 import passport from "passport";
 import routes from "../routes";
 import User from "../models/User";
-import { classBody } from "babel-types";
 
 export const getJoin = (req, res) => {
   res.render("join", { pageTitle: "Join" });
