@@ -21,12 +21,16 @@ block content
                 a(href=routes.userDetail(video.creator.id))=video.creator.name
         .video_comments
             if video.comments.length === 1
-                span.video_comment-number 1 comment
+                span.video_comment-number
+                    span#jsCommentNumber 1
+                    |  comment
             else
-                span.video__comment-number #{video.comments.length} comments
+                span.video_comment-number
+                    span#jsCommentNumber=video.comments.length
+                    |  comments
             form.add_comment#jsAddComment
                 input(type="text", placeholder="Add a comment")
-            ul.video_comments-list
-                each comment in video.comments
+            ul.video_comments-list#jsCommentList
+                each comment in video.comments.reverse()
                      li
                         span=comment.text
