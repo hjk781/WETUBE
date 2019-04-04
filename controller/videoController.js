@@ -112,17 +112,17 @@ export const deleteVideo = async (req, res) => {
 };
 
 // 뷰 체크
-export const posRegisterView = async (req, res) => {
+export const postRegisterView = async (req, res) => {
   const {
     params: { id }
   } = req;
   try {
     const video = await Video.findById(id);
     video.views += 1;
-    res.startusCode(200);
+    video.save();
+    res.status(200);
   } catch (error) {
-    res.startusCode(400);
-    res.end();
+    res.status(400);
   } finally {
     res.end();
   }
