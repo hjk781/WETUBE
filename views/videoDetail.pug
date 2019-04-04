@@ -23,9 +23,10 @@ block content
             if video.comments.length === 1
                 span.video_comment-number 1 comment
             else
-                span.video_comment-number #{video.comments.length} comments
+                span.video__comment-number #{video.comments.length} comments
             form.add_comment#jsAddComment
                 input(type="text", placeholder="Add a comment")
             ul.video_comments-list
                 each comment in video.comments
-                    span comment.text
+                     li
+                        span=comment.text
