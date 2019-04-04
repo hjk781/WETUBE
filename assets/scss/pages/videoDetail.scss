@@ -34,8 +34,16 @@
   }
   .video_comments {
     margin-top: 25px;
+    text-align: center;
     .video_comment-number {
       font-size: 18px;
+    }
+    .add_comment {
+      margin-top: 25px;
+      width: 100%;
+      input {
+        width: 100%;
+      }
     }
   }
 }
