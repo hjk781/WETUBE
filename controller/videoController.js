@@ -152,3 +152,12 @@ export const postAddComment = async (req, res) => {
     res.end();
   }
 };
+
+//
+export const postRemoveComment = async (req, res) => {
+  const {
+    params: { id },
+    body: { comments }
+  } = req;
+  await Video.findByIdAndUpdate({ _id: id }, { comments });
+};
