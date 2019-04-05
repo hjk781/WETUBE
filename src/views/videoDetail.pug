@@ -34,3 +34,6 @@ block content
                 each comment in video.comments.reverse()
                      li
                         span=comment.text
+                        if loggedUser && video.creator.id === loggedUser.id
+                            a#jsRemoveComment
+                                button X
