@@ -4,7 +4,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 mongoose.connect(
-  process.env.PRODUCTION ? process.env.MOMGO_URL_PROD : process.env.MONGO_URL,
+  // process.env.PRODUCTION ? process.env.MOMGO_URL_PROD : process.env.MONGO_URL,
+  process.env.MOMGO_URL_PROD,
   {
     useNewUrlParser: true,
     useFindAndModify: false
