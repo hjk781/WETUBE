@@ -24,6 +24,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "forever": "^1.0.0",
     "get-blob-duration": "^1.0.1",
     "helmet": "^3.16.0",
     "mongoose": "^5.4.20",
@@ -51,7 +52,7 @@
     "build": "npm run build:server && npm run build:assets && npm run copyAll",
     "prebuild": "rm -rf build",
     "tunnel": "ngrok http 4000",
-    "start": "PRODUCTION=true node build/init.js",
+    "start": "PRODUCTION=true forever start node build/init.js",
     "prestart": "npm run build"
   },
   "devDependencies": {
